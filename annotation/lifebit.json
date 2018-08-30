@@ -1,0 +1,31 @@
+{"name": "CellBase",
+    "parameters":[
+    {
+        "flag": "--",
+        "name": "--assembly",
+        "type": "value",
+        "value": "hsapiens"
+    },{
+        "flag": "--",
+        "name": "input-file",
+        "type": "file",
+        "content": {
+            "provider": "s3",
+            "bucket": "phenopolis",
+            "value": "NA12878.exome.vcf"
+        }
+    },{
+        "flag": "--",
+        "name": "output",
+        "type": "file",
+        "content": {
+            "provider": "s3",
+            "bucket": "phenopolis",
+            "value": "NA12878.exome.json"
+
+        }
+    }
+    ],
+    "docker" : "lifebitai/cellbase:4.5.6-v3",
+    "cmd" : "docker run -v /home/ubuntu:/data lifebitai/cellbase:4.5.6-v3   -i /data/NA12878.exome.vcf -s 'hsapiens' -o /data/NA12878.exome"
+}

@@ -1,0 +1,40 @@
+{"name": "BWA",
+   	"parameters":[
+   	{
+   		"flag": "--",
+   		"name": "reads",
+   		"type": "file",
+   		"content": {
+   			"provider": "s3",
+            "bucket": "phenopolis",
+   			"value": "ERR003989_1.filt.fastq.gz"
+   		}
+    },{
+        "flag": "--",
+        "name": "reads",
+        "type": "file",
+        "content": {
+            "provider": "s3",
+         "bucket": "phenopolis",
+            "value": "ERR003989_2.filt.fastq.gz"
+        }
+    },{
+   		"flag": "--",
+   		"name": "reference",
+   		"type": "value",
+        "value": "hg19"
+
+   	},{
+   		"flag": "--",
+   		"name": "outfile",
+   		"type": "file",
+   		"content": {
+   			"provider": "s3",
+   			"bucket": "lifebit-featured-datasets",
+   			"value": "NA12878"
+
+   		}
+   	}
+    ],
+    "docker" : "lifebitai/bwamem:0.1"
+}

@@ -23,7 +23,7 @@ if __name__ == '__main__':
     nCpus = multiprocessing.cpu_count()
     # start measuring time
     start = datetime.datetime.now()
-
+    print("running BWA mem")
     # Align reads > sorted bam > save
     if len(vargs['reads']) == 1:
         reads = vargs['reads'][0]

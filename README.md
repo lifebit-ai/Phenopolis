@@ -20,8 +20,8 @@ Runtime on c5.2xlarge instance from fastq to bam is 0.3h, 0.1 USD.
 ## Cellbase 
 Thie docker container CellBase.
 Setting parameters of container 
-![alt text](https://github.com/lifebit-ai/Phenopolis/edit/master/cellbase1.png "")
+![alt text](https://github.com/lifebit-ai/Phenopolis/cellbase1.png "")
 Selecting job execution instance
-![alt text](https://github.com/lifebit-ai/Phenopolis/edit/master/cellbase2.png "")
+![alt text](https://github.com/lifebit-ai/Phenopolis/cellbase2.png "")
 
 Runtime on c5.2xlarge instance from fastq to bam is 0.3h, 0.1 USD.

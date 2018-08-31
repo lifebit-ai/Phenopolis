@@ -36,5 +36,7 @@
    		}
    	}
     ],
-    "docker" : "lifebitai/bwamem:0.1"
+    "docker" : "lifebitai/bwamem:0.1",
+    "instance" : "c5.2xlarge",
+
 }

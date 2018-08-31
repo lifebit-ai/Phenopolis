@@ -36,7 +36,7 @@
    		}
    	}
     ],
-    "docker" : "lifebitai/bwamem:0.1",
+    "docker" : "lifebitai/bwamem:0.2",
     "instance" : "c5.2xlarge",
-
+    "cmd" : "docker run -v /home/ubuntu/:/data -it lifebitai/bwamem:0.1 -i /data/ERR003989_2.filt.fastq.gz -i /data/ERR003989_1.filt.fastq.gz  -o /data/NA12878 -r hg19"
 }

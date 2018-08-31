@@ -29,16 +29,16 @@ if __name__ == '__main__':
         reads = vargs['reads'][0]
         subprocess.call(f"./bwa mem -t {nCpus} {args.reference}.fa {reads} | \
                          samtools view -bS - | \
-                         samtools sort -O BAM -o - - | \
-                         samtools index - {args.outfile}", shell=True, stdout=PIPE, executable="/bin/bash")
+                         samtools sort -O BAM -o {args.outfile}.bam - && \
+                         samtools index {args.outfile}.bam", shell=True, stdout=PIPE, executable="/bin/bash")
     elif len(vargs['reads']) == 2:
         read1 = vargs['reads'][0]
         read2 = vargs['reads'][1]
 
         subprocess.call(f"./bwa mem -t {nCpus} {args.reference}.fa {read1} {read2}| \
                          samtools view -bS - | \
-                         samtools sort -O BAM -o - - | \
-                         samtools index - {args.outfile}", shell=True, stdout=PIPE, executable="/bin/bash")
+                         samtools sort -O BAM -o {args.outfile}.bam - && \
+                         samtools index {args.outfile}.bam", shell=True, stdout=PIPE, executable="/bin/bash")
     else:
         sys.exit("--reads should be specified either once or twice")             
 

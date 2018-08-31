@@ -12,6 +12,16 @@ An example of docker command: docker run -v /localdata/:/data lifebitai/cellbase
 
 Runtime on c5.2xlarge instance from fastq to bam is 4.3h, on-demand cost 1.65 USD.
 
+## DeepVariant 
+Thie docker container CellBase.
+Runtime on c5.2xlarge instance from fastq to bam is 0.3h, 0.1 USD.
+
+
 ## Cellbase 
 Thie docker container CellBase.
+Setting parameters of container 
+![alt text](https://github.com/lifebit-ai/Phenopolis/edit/master/cellbase1.png "")
+Selecting job execution instance
+![alt text](https://github.com/lifebit-ai/Phenopolis/edit/master/cellbase2.png "")
+
 Runtime on c5.2xlarge instance from fastq to bam is 0.3h, 0.1 USD.

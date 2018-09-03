@@ -39,6 +39,7 @@ Since we are using exome input following best practices, we specify the followin
 * exome = flag to specify that exome training model is used 
 * bed = an accompanying path to file with bed regions, the calls will be mode only in those regions limiting effect of off-target enrichemnt
 * hg19 (genome reference flag) 
+* output sample name 
 
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/DV1.png "")
 
@@ -49,8 +50,11 @@ Runtime on c5.2xlarge instance from fastq to bam is 0.3h, 0.1 USD.
 
 
 ## Cellbase 
-Thie docker container CellBase. To run in the platform first:
-Set arameters of container
+Thie docker container includes CellBase  variant annotation engine. 
+To run in the platform first set the parameters of the container:
+* i = input vcf 
+* s = genome reference 
+* o = output 
 
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/cellbase1.png "")
 

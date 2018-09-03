@@ -20,7 +20,11 @@ This docker container contains:
 The input could be two paired-end fastq files or a merged one, python wrapper automatically adapts to the input.
 The number of threads is one by default for bwa, but set to the number of cpus by the wrapper. Deploit allows us to complete these operations through graphical UI and we will be using in this document. 
 
-First, we set parameters of the container. We specify paired-end reads through two inputs (separately for first and second read) and reference file.
+First, we set parameters of the container. We specify paired-end reads through two inputs (separately for first and second read) and reference file like this 
+* reads = first read 
+* reads = second read 
+* reference = hg19
+* output = bam file 
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/bwa1.png "")
 
 Next we select job execution 
@@ -38,8 +42,8 @@ Since we are using exome input following best practices, we specify the followin
 * bam_folder = analysis will run on all samples in the folder
 * exome = flag to specify that exome training model is used 
 * bed = an accompanying path to file with bed regions, the calls will be mode only in those regions limiting effect of off-target enrichemnt
-* hg19 (genome reference flag) 
-* output sample name 
+* hg19 = (genome reference flag) 
+* output = sample name 
 
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/DV1.png "")
 

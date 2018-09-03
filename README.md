@@ -31,11 +31,18 @@ Next we select job execution
  
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/bwa2.png "")
 
+
+Command line docker example (where data is the name of local volume): 
+
+
+"docker run -v /home/ubuntu/:/data -it lifebitai/bwamem:0.2 -i /data/ERR003989_2.filt.fastq.gz -i /data/ERR003989_1.filt.fastq.gz  -o /data/NA12878 -r hg19"
+
+
 Runtime on c5.2xlarge instance from fastq to bam is 4.3h.
 
 
 ## DeepVariant 
-DeepVariant represents nextflow workflow rather than docker as it is composed of several separate steps. Notwithstanding different implementations, the interface to deep variant is usefully the same as in case of docker containers. 
+DeepVariant represents nextflow workflow rather than docker as it is composed of several separate steps. We use the following nextflow repo https://github.com/lifebit-ai/DeepVariant. Notwithstanding different implementations (docker vs nextflow), the interface to DeepVariant is (usefully) the same as in the case of docker containers. 
 
 
 Since we are using exome input following best practices, we specify the following arguments in the first input form (as in the screenshot)
@@ -65,4 +72,9 @@ To run in the platform first set the parameters of the container:
 Next select job execution 
  
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/cellbase2.png "")
+
+Command line docker example (where data is the name of local volume): 
+
+"docker run -v /home/ubuntu:/data lifebitai/cellbase:4.5.6-v3   -i /data/NA12878.exome.vcf -s 'hsapiens' -o /data/NA12878.exome"
+
 Runtime on c5.2xlarge instance from fastq to bam is 0.3h, 0.1 USD.

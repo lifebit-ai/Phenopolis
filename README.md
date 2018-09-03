@@ -31,7 +31,7 @@ Next we select job execution
  
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/bwa2.png "")
 
-Runtime on c5.2xlarge instance from fastq to bam is 4.3h, on-demand cost 1.65 USD.
+Runtime on c5.2xlarge instance from fastq to bam is 4.3h.
 
 
 ## DeepVariant 
@@ -50,7 +50,7 @@ Since we are using exome input following best practices, we specify the followin
 Next we select job execution 
  
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/DV2.png "")
-Runtime on c5.2xlarge instance from fastq to bam is 0.3h, 0.1 USD.
+Runtime on x1e instance from fastq to bam is 0.3h, 0.1 USD.
 
 
 ## Cellbase 

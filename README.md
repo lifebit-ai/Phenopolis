@@ -18,28 +18,31 @@ This docker container contains:
 * pre-indexed genome reference for hg19
 * samtools to derive bam file from bwa sam output 
 The input could be two paired-end fastq files or a merged one, python wrapper automatically adapts to the input.
-The number of threads is one by default for bwa, but set to the number of cpus by the wrapper.
-Set parameters of container
+The number of threads is one by default for bwa, but set to the number of cpus by the wrapper. Deploit allows us to complete these operations through graphical UI and we will be using in this document. 
 
+First, we set parameters of the container. We specify paired-end reads through two inputs (separately for first and second read) and reference file.
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/bwa1.png "")
 
-Next select job execution 
+Next we select job execution 
  
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/bwa2.png "")
-Runtime on c5.2xlarge instance from fastq to bam is 0.3h, 0.1 USD.
-
-An example of docker command: docker run -v /localdata/:/data lifebitai/cellbase:4.5.6-v3  -i /data/NA12878.exome.vcf -s 'hsapiens' -o /data/NA12878.exome 
 
 Runtime on c5.2xlarge instance from fastq to bam is 4.3h, on-demand cost 1.65 USD.
 
 
 ## DeepVariant 
-Thie docker container Deepvariant.
-Set arameters of container
+DeepVariant represents nextflow workflow rather than docker as it is composed of several separate steps. Notwithstanding different implementations, the interface to deep variant is usefully the same as in case of docker containers. 
+
+
+Since we are using exome input following best practices, we specify the following arguments in the first input form (as in the screenshot)
+* bam_folder = analysis will run on all samples in the folder
+* exome = flag to specify that exome training model is used 
+* bed = an accompanying path to file with bed regions, the calls will be mode only in those regions limiting effect of off-target enrichemnt
+* hg19 (genome reference flag) 
 
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/DV1.png "")
 
-Next select job execution 
+Next we select job execution 
  
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/DV2.png "")
 Runtime on c5.2xlarge instance from fastq to bam is 0.3h, 0.1 USD.

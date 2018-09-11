@@ -65,7 +65,7 @@ Thie docker container includes CellBase  variant annotation engine.
 To run in the platform first set the parameters of the container:
 * i = input vcf 
 * s = genome reference 
-* o = output 
+* o = output (name of the file)
 
 ![parameters](https://github.com/lifebit-ai/Phenopolis/blob/master/cellbase1.png "")
 
